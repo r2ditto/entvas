@@ -10,7 +10,8 @@ import {
 } from "@chakra-ui/react";
 
 import { supabase } from "../_app";
-import { Quote, useQuotes } from "@/hooks/useQuotes";
+import { useQuotes } from "@/hooks/useQuotes";
+import { Quote } from "@/types";
 
 export default function SalesQuotePage({ quote }: { quote: Quote }) {
   const { mutate } = useQuotes();

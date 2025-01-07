@@ -17,7 +17,7 @@ export default async function handler(
     return res.status(400).json({ error: "Missing recipientEmail or quoteId" });
   }
 
-  const quoteLink = `${process.env.NEXT_PUBLIC_BASE_URL}/quote/${quoteId}`;
+  const quoteLink = `${process.env.NEXT_PUBLIC_BASE_URL}/sales-quote/${quoteId}`;
 
   try {
     await sendgrid.send({

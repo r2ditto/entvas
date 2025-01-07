@@ -4,7 +4,8 @@ import { Box, Card, Text, Heading, Flex } from "@chakra-ui/react";
 
 import { supabase } from "./_app";
 import DashboardLayout from "@/components/layouts/dashboard-layout";
-import { Quote, useQuotes } from "@/hooks/useQuotes";
+import { useQuotes } from "@/hooks/useQuotes";
+import { Quote } from "@/types";
 
 export default function Dashboard({ fallbackData }: { fallbackData: Quote[] }) {
   const { quotes, isLoading, isError } = useQuotes(fallbackData, 1000);
